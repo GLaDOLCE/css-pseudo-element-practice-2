@@ -2,7 +2,7 @@
 偽元素操作練習，順便練練CSS物件旋轉動畫、模擬擠壓效果等等
 
 
-參考，修改自https://www.oxxostudio.tw/articles/201502/css-bounce.html
+參考、修改自https://www.oxxostudio.tw/articles/201502/css-bounce.html
 
 
 方塊初始不轉，每運動25%轉動45度，因為是來回轉，所以在50%時角度要從90度開始扣回
