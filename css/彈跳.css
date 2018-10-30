@@ -1,0 +1,158 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body{
+    background: #FFFAF0;
+}
+.box{
+    position:relative;
+}
+.box:before{
+    content:'';
+    position:absolute;
+    z-index:2;
+    top:60px;
+    left:50px;
+    width:45px;
+    height:50px;
+    background: #00DD77;
+    border-radius:2px;              /*正方形四角稍微磨圓*/
+    transform: rotate(45deg);       /*旋轉45度，角朝下*/
+    -webkit-animation:box 2.5s infinite ; 
+}                                   /*正方形*/
+@-webkit-keyframes box{
+    0%{
+      top:50px;
+      transform: rotate(0deg);
+    }
+    10%{
+      border-radius:2px;  /*從 10% 的地方才開始變形*/
+      width:50px;
+    }
+    25%{
+        left:90px;
+        top:90px;
+        transform: rotate(45deg);
+        border-bottom-right-radius:25px;
+        background: #00FFCC;
+    }
+    40%{
+        border-radius:2px;  /*到 40% 的地方恢復原狀*/
+        height: 50px;
+    }
+    50%{
+        left:130px;
+        top:50px; 
+        height: 45px;
+        transform: rotate(90deg);
+        border-bottom-right-radius:2px;
+        background: #33CCFF;
+    }
+    60%{
+        border-radius:2px;  /*從 60% 的地方才開始變形*/
+        height: 50px;
+    }
+    75%{
+        left:90px;
+        top:90px;
+        transform: rotate(45deg);
+        border-bottom-right-radius:25px;
+        background: #00FFCC;
+    }
+    90%{
+      border-radius:2px;  /*到 90% 的地方恢復原狀*/
+      width:50px;
+    }
+    100%{
+        left:50px;
+        top:50px;
+        transform: rotate(0deg);
+        background: #00DD77;
+    }
+}
+.box:after{
+    content:'';
+    position:absolute;
+    z-index:1;
+    top:138px;
+    left:52px;
+    width:44px;
+    height:3px;
+    background:#eaeaea;
+    border-radius:100%;
+    -webkit-animation:shadow 2.5s infinite ; 
+}                  /*陰影*/
+@-webkit-keyframes shadow{
+    0%{
+      left:54px;
+      width:40px;
+      background:#eaeaea;
+    }
+    25%{
+        left:90px;
+        width:50px;
+        background:#d1d1d1;
+        height:7px;
+    }
+    50%{
+      top:136px;
+      left:130px;   /*讓陰影保持在原位*/
+      width:40px;
+      height:3px;
+      background:#eaeaea;
+    }
+    75%{
+        left:90px;
+        width:50px;
+        background:#d1d1d1;
+        height:7px;
+    }
+    100%{
+        left:54px;
+        width:40px;
+        background:#eaeaea;
+        height:3px;
+    }
+}
+
+.wall1{
+    background: #444444;
+    position: fixed;
+    width: 50px;
+    height: 200px;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+}
+.wall2{
+    background: #444444;
+    position: fixed;
+    width: 55px;
+    height: 200px;
+    left: 178px;
+    top: 0px;
+    z-index: 2;
+}
