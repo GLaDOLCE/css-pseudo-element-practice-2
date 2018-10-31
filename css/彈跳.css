@@ -40,7 +40,6 @@ body{
     height:50px;
     background: #00DD77;
     border-radius:2px;              /*正方形四角稍微磨圓*/
-    transform: rotate(45deg);       /*旋轉45度，角朝下*/
     -webkit-animation:box 2.5s infinite ; 
 }                                   /*正方形*/
 @-webkit-keyframes box{
